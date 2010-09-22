@@ -34,6 +34,8 @@ import net.rim.device.api.system.DeviceInfo;
  */
 public class DeviceCommand implements Command {
 
+	public static String phonegapVersion = "pre-0.92 EDGE";		// PhoneGap version
+	
 	private static final String CODE = "PhoneGap=initialize";
 	private static final String EMULATOR = "Emulator";
 	private static final String DEVICE_NAME = "navigator.device.name = '";
@@ -45,6 +47,7 @@ public class DeviceCommand implements Command {
 	private static final String DEVICE_SIMULATOR = "';navigator.device.isSimulator = ";
 	private static final String DEVICE_CAMERA = ";navigator.device.hasCamera = ";
 	private static final String DEVICE_UUID = ";navigator.device.uuid = ";
+	private static final String DEVICE_PHONEGAP = ";navigator.device.phonegap = 'pre-0.92 EDGE'";
 	private static final String SEMI_COLON = ";";
 
 	/**
@@ -79,7 +82,7 @@ public class DeviceCommand implements Command {
 		deviceInfo.append(DeviceInfo.getSoftwareVersion()).append(DEVICE_SIMULATOR);
 		deviceInfo.append(DeviceInfo.isSimulator()).append(DEVICE_CAMERA);
 		deviceInfo.append(DeviceInfo.hasCamera()).append(DEVICE_UUID);
-		deviceInfo.append(DeviceInfo.getDeviceId()).append(SEMI_COLON);
+		deviceInfo.append(DeviceInfo.getDeviceId()).append(DEVICE_PHONEGAP);
 		return deviceInfo.toString();
 	}
 

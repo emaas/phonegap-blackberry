@@ -8,7 +8,7 @@ function Device() {
     this.platform = null;
     this.version  = null;
     this.name     = null;
-    this.gap      = null;
+    this.phonegap = null;
     this.uuid     = null;
 }
 
