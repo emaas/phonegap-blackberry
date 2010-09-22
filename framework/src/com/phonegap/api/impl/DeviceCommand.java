@@ -34,8 +34,6 @@ import net.rim.device.api.system.DeviceInfo;
  */
 public class DeviceCommand implements Command {
 
-	public static String phonegapVersion = "pre-0.92 EDGE";		// PhoneGap version
-	
 	private static final String CODE = "PhoneGap=initialize";
 	private static final String EMULATOR = "Emulator";
 	private static final String DEVICE_NAME = "navigator.device.name = '";
