@@ -243,3 +243,15 @@ PhoneGap.Channel.join(function() {
 document.addEventListener('DOMContentLoaded', function() {
     PhoneGap.onDOMContentLoaded.fire();
 }, false);
+
+/**
+* function used to exit an application
+* @param reasonToExit   The reason to exit the app 0 = no reason.
+*/
+function exit(reasonToExit)
+{
+	if(reasonToExit != 0){
+		alert(reasonToExit);
+	}
+	Utility.exit(); 
+}
